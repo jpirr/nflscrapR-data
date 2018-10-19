@@ -1,0 +1,17 @@
+---
+title: "NFL Final Project"
+author: "John Pirrmann"
+date: "October 18, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(dplyr)
+library(knitr)
+```
+
+
+# Project Description
+#### The data set I am using for my final project is a detailed description of every play that has happened in the NFL since 2009. For the subject of my project I want to look at two things specifically. The first is the preformance of Eli Manning, the quarterback for the New York Giants. I will measre this through tradtional preformance metrics such as passing yards, accuracy etc. I then want to also analyze the preformance of the offensive line of the New York Giants. This will be measure by statistics such as the number of QB hurries, hits and sacks that they give up. After this is done I will compare both Eli and the Oline to others in the leauge over that time and see where they stack up. 
