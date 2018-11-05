@@ -3,12 +3,13 @@ library(shiny)
 library(dplyr)
 library(knitr)
 library(tidytext)
-plays.16 <- read_csv("play_by_play_data/regular_season/reg_pbp_2016.csv")
+library(rsconnect)
+plays.17 <- read_csv("reg_pbp_2017.csv")
 
 
 
 ui <- fluidPage(
-  titlePanel("2016 Passing Summary"),
+  titlePanel("2017 Passing Summary"),
   sidebarLayout(
     sidebarPanel(
       selectInput(inputId = "passer_player_name",
@@ -26,9 +27,8 @@ ui <- fluidPage(
 
 server <- function(input, output) {
   output$scatter <- renderPlot({
-    plays.16 <- read_csv("play_by_play_data/regular_season/reg_pbp_2016.csv") %>% 
-      filter(posteam =="NYG" | posteam =="NE")
-    ggplot(data = plays.16, aes(x = yards_gained, y = pass_location )) + geom_point()
+   
+    ggplot(data = plays.17, aes(x = yards_gained, y = pass_location )) + geom_point()
   })
   
 }
