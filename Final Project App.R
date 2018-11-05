@@ -4,7 +4,7 @@ library(dplyr)
 library(knitr)
 library(tidytext)
 library(rsconnect)
-plays.17 <- read_csv("reg_pbp_2017.csv")
+plays.17 <- read.csv("reg_pbp_2017.csv")
 
 
 
